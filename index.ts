@@ -1,3 +1,3 @@
-export function isOdd(value: number) {
-    return (value % 2) === 1
+export function isOdd(value: number | string) {
+    return (Number(value) % 2) === 1
 }
