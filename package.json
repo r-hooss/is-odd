@@ -1,0 +1,18 @@
+{
+  "name": "is-odd",
+  "version": "1.0.0",
+  "main": "dist/index",
+  "repository": "git@github.com:5tarlight/is-odd.git",
+  "author": "5tarlight <developerstarlight@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "node dist",
+    "build": "tsc -b",
+    "test": "jest"
+  },
+  "devDependencies": {
+    "@types/node": "^14.14.19",
+    "ts-node": "^9.1.1",
+    "typescript": "^4.1.3"
+  }
+}
