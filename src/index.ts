@@ -1,9 +1,11 @@
-export function isOdd(value: number | string) {
-  const num = Number(value)
+import { InvalidArgumentException, RangeException } from 'node-exceptions';
 
+export class IAException extends InvalidArgumentException {}
+export class RException extends RangeException {}
+
+export const isOdd = (value: number) => {
   if (!Number.isInteger(value))
-    throw new Error('expected an integer');
-  if (!Number.isSafeInteger(value))
-    throw new Error('value exceeds maximum safe integer');
-  return (num % 2) === 1
+    throw new IAException('expected an integer');
+  
+  return value % 2 === 1;
 }
