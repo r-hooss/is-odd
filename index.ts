@@ -1,5 +1,5 @@
 export function isOdd(value: number | string) {
-    value = Number(value)
+    value = Math.abs(Number(value))
     if (!Number.isInteger(value))
         throw new Error('expected an integer');
     if (!Number.isSafeInteger(value))
