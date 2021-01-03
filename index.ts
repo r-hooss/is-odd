@@ -1,8 +1,8 @@
 export function isOdd(value: number | string) {
     value = Math.abs(Number(value))
     if (!Number.isInteger(value))
-        throw new Error('expected an integer');
+        throw new RangeError('expected an integer');
     if (!Number.isSafeInteger(value))
-        throw new Error('value exceeds maximum safe integer');
+        throw new RangeError('value exceeds maximum safe integer');
     return (value % 2) === 1
 }
